@@ -23,3 +23,8 @@
 <script src="scripts/authController.js"></script>
 <script src="scripts/userController.js"></script>
 </html>
+
+<!-- In the index.php file I have included all of the application dependency scripts that I installed earlier
+and have also put references in for the application scripts that I have yet to create.
+Since we're using UI Router we are serving a ui-view in the middle of the page which is what will be used to handle
+the different states. --!>

@@ -13,6 +13,7 @@ class AuthenticateController extends Controller
 
     public function __construct()
     {
+    	//use jwt auth middleware for incoming requests except auth route as that would block user from obtaining
         $this->middleware('jwt.auth',['except' => ['authenticate']]);
     }
 
@@ -48,3 +49,8 @@ class AuthenticateController extends Controller
         return response()->json(compact('token'));
     }
 }
+//The try block in the authenticate method attempts to produce a token using the JWTAuth facade with the user's credentials.
+// If something goes wrong with that, the method will return a 401 and say the credentials are invalid.
+// In other cases where an exception is thrown, it will return a 500 indicating an internal server error and saying that something went wrong.
+// If we are able to get past that then we can return a token. Returning it with compact('token') puts the object on a key called token
+// which will come in handy when we read it with Satellizer.

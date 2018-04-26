@@ -27,3 +27,11 @@
                 });
         });
 })();
+
+/* Here I am loading the ui.router and satellizer modules and setting up some configuration for them.
+Satellizer gives us an $authProvider which can be used to configure its settings.
+In particular, I want to specify that when using Satellizer to login,
+the HTTP requests that get made to retrieve the JWT from the API should go to api/authenticate.
+Also use $stateProvider to setup configuration for the two states that we'll be using: auth and users.
+
+Now need to create views for the auth and users states and controllers to handle their behavior. */

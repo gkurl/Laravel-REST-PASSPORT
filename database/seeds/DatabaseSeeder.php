@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         $users = array(
             ['name' => 'Ryan Chenkie', 'email' => 'bob@gmail.com', 'password' => Hash::make('secret')],
             ['name' => 'Gagandeep Kurl', 'email' => 'gagandeep@hello.com', 'password' => Hash::make('secret')],
-            ['name' => 'Ian Smith', 'email' => 'ian@maxtime.com', 'password' => Hash::make('secret')],
+            ['name' => 'Ian Moore', 'email' => 'ian@maxtime.com', 'password' => Hash::make('secret')],
             ['name' => 'Adam Kukic', 'email' => 'adam@gmail.com', 'password' => Hash::make('secret')],
         );
 
